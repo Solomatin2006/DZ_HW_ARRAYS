@@ -3,44 +3,44 @@ package ru.netology.stats;
 
 public class StatsService {
 
-    public long SumOfAllSales(long[] sales) {
-        long AllSales = 0;
+    public long sumOfAllSales(long[] sales) {
+        long allSales = 0;
         for (long sale : sales) {
-            AllSales += sale;
+            allSales += sale;
         }
-        return AllSales;
+        return allSales;
     }
 
-    public long AverageSalesPerMonth(long[] sales) {
-        long AllSales = SumOfAllSales(sales);
-        return AllSales / 12;
+    public long averageSalesPerMonth(long[] sales) {
+        long allSales = sumOfAllSales(sales);
+        return allSales / 12;
     }
 
-    public int MonthNumberPeakSales(long[] sales) {
-        int PeakMonth = 0;
+    public int monthNumberPeakSales(long[] sales) {
+        int peakMonth = 0;
         for (int i = 0; i < sales.length; i = i + 1) {
-            if (sales[i] >= sales[PeakMonth]) {
-                PeakMonth = i;
+            if (sales[i] >= sales[peakMonth]) {
+                peakMonth = i;
             }
         }
-        return PeakMonth + 1;
+        return peakMonth + 1;
     }
 
-    public int MonthNumberMinSales(long[] sales) {
-        int MinMonth = 0;
+    public int monthNumberMinSales(long[] sales) {
+        int minMonth = 0;
         for (int i = 0; i < sales.length; i = i + 1) {
-            if (sales[i] <= sales[MinMonth]) {
-                MinMonth = i;
+            if (sales[i] <= sales[minMonth]) {
+                minMonth = i;
             }
         }
-        return MinMonth + 1;
+        return minMonth + 1;
     }
 
-    public int MonthsOfSalesBelowAverage(long[] sales) {
-        long BelowAverage = AverageSalesPerMonth(sales);
+    public int monthsOfSalesBelowAverage(long[] sales) {
+        long belowAverage = averageSalesPerMonth(sales);
         int counter = 0;
         for (long sale : sales) {
-            if (sale < BelowAverage) {
+            if (sale < belowAverage) {
                 counter = counter + 1;
             }
 
@@ -49,11 +49,11 @@ public class StatsService {
 
     }
 
-    public int MonthSalesAboveAverage(long[] sales) {
-        long AboveAverage = AverageSalesPerMonth(sales);
+    public int monthSalesAboveAverage(long[] sales) {
+        long aboveAverage = averageSalesPerMonth(sales);
         int counter = 0;
         for (long sale : sales) {
-            if (sale < AboveAverage) {
+            if (sale < aboveAverage) {
                 counter = counter + 1;
             }
 

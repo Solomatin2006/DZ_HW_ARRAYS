@@ -7,66 +7,66 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class StatsServiceTest {
     @Test
-    public void SumOfAllSales() {
+    public void sumOfAllSales() {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
 
-        long actual = service.SumOfAllSales(sales);
+        long actual = service.sumOfAllSales(sales);
         long expected = 8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18;
 
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void AverageSalesPerMonth() {
+    public void averageSalesPerMonth() {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
 
-        long actual = service.AverageSalesPerMonth(sales);
+        long actual = service.averageSalesPerMonth(sales);
         long expected = (8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18) / 12;
 
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void MonthNumberPeakSales() {
+    public void monthNumberPeakSales() {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
 
-        long actual = service.MonthNumberPeakSales(sales);
+        long actual = service.monthNumberPeakSales(sales);
         long expected = 8;
 
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void MonthNumberMinSales() {
+    public void monthNumberMinSales() {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
 
-        long actual = service.MonthNumberMinSales(sales);
+        long actual = service.monthNumberMinSales(sales);
         long expected = 9;
 
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void MonthsOfSalesBelowAverage() {
+    public void monthsOfSalesBelowAverage() {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
 
-        long actual = service.MonthsOfSalesBelowAverage(sales);
+        long actual = service.monthsOfSalesBelowAverage(sales);
         long expected = 5;
 
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void MonthSalesAboveAverage() {
+    public void monthSalesAboveAverage() {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
 
-        long actual = service.MonthSalesAboveAverage(sales);
+        long actual = service.monthSalesAboveAverage(sales);
         long expected = 5;
 
         Assertions.assertEquals(expected, actual);
